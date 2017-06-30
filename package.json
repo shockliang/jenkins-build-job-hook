@@ -4,16 +4,25 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shockliang/jenkins-build-job-hook.git"
   },
-  "author": "",
+  "author": "Shock",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/shockliang/jenkins-build-job-hook/issues"
   },
-  "homepage": "https://github.com/shockliang/jenkins-build-job-hook#readme"
+  "homepage": "https://github.com/shockliang/jenkins-build-job-hook#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.4.2"
+  }
 }
