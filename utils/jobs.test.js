@@ -40,4 +40,13 @@ describe('Jobs', () => {
         var job = jobs.findIdByPath('U   trunk/test.txt');
         expect(job).toEqual(undefined);
     });
+
+    it('should get url when pass job', () => {
+        var job = jobs.findIdByPath('U   branches/dev/test.txt');
+        
+        var expectUri = 'http://sschook:123456@192.168.10.247:8080/job/SSC.dev/build?token=asdf';
+        var actualUri = jobs.getUri(job);
+
+        expect(actualUri).toEqual(expectUri);
+    });
 });
