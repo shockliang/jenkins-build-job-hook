@@ -6,14 +6,7 @@ const request = require('request');
 
 const argv = yargs
     .command('build', 'build the remote jenkins job', {
-        role: argsOptions.roleOption,
-        apiKey: argsOptions.apiKeyOption,
-        jobName: argsOptions.jobNameOption,
-        host: argsOptions.hostOption,
-        protocol: argsOptions.protocolOption,
-        port: argsOptions.portOption,
-        buildNumber: argsOptions.buildNumberOption,
-        // outputFileName: argsOptions.outputFileNameOption,
+        path: argsOptions.pathOption
     })
     .help()
     .alias('help', 'h')
