@@ -32,17 +32,17 @@ describe('Jobs', () => {
     });
 
     it('should be find the job when pass correct path',() => {
-        var job = jobs.findIdByPath('U   branches/dev/test.txt');
+        var job = jobs.findJobByPath('U   branches/dev/test.txt');
         expect(job.id).toEqual(1);
     });
 
     it('should return undefined when path doesnt find', () => {
-        var job = jobs.findIdByPath('U   trunk/test.txt');
+        var job = jobs.findJobByPath('U   trunk/test.txt');
         expect(job).toEqual(undefined);
     });
 
     it('should get url when pass job', () => {
-        var job = jobs.findIdByPath('U   branches/dev/test.txt');
+        var job = jobs.findJobByPath('U   branches/dev/test.txt');
         
         var expectUri = 'http://sschook:123456@192.168.10.247:8080/job/SSC.dev/build?token=asdf';
         var actualUri = jobs.getUri(job);

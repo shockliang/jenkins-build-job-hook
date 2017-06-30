@@ -1,0 +1,13 @@
+{
+    "list":[{
+        "id": "1",
+        "protocol": "http",
+        "host": "192.168.10.247",
+        "port": "8080",
+        "role": "sschook",
+        "apiKey": "123456789",
+        "jobName": "SSC.dev",
+        "jobToken": "asdf",
+        "defaultSvnPath": "branches/dev/"
+    }]
+}
