@@ -1,8 +1,6 @@
 const yargs = require('yargs');
 const axios = require('axios');
-const argsOptions = require('./args.options.js')
-const request = require('request');
-// const fileExporter = require('./file-exporter.js');
+const argsOptions = require('./args.options.js');
 
 const argv = yargs
     .command('build', 'build the remote jenkins job', {
