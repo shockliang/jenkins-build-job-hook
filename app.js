@@ -18,6 +18,9 @@ if(fs.existsSync(argv.path)) {
         var paths = data.toString().split(/\r?\n/);
         var jobs = new Jobs();
         var job = jobs.findJobByPath(data.toString());
+        if(!job) { 
+            return;
+        }
 
         axios.get(jobs.getUri(job)).then((response) => {
             console.log('send request successfully');
